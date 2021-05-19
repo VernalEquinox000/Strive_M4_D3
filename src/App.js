@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import SingleBook from "./components/SingleBook"
+import MyBadge from "./components/MyBadge"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+import WarningSign from "./components/WarningSign";
+
+class App extends React.Component {
+  render() {
+    return (
+      <>
+        <WarningSign text="fucchi" variant="danger" />
+        <MyBadge text="cazzo" variant="secondary"/>
+       <SingleBook />
+      </>
+    );
+  }
 }
 
 export default App;
